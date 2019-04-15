@@ -6,49 +6,81 @@
 	<link rel="stylesheet" type="text/css" href="/css/style.min.css">
 </head>
 <body>
-	<header class='header'>
+	<header>
+            <nav class="hamburger">    
+                <button class="hamburger__button">
+                    <span class="hamburger__button-bar"></span>
+                    <span class="hamburger__button-bar"></span>
+                    <span class="hamburger__button-bar"></span>
+                </button>
+            </nav>
+            <img src="/images/logo.svg" class="logo-mobile"  alt="owme">
+		<div class="desktop__navigation" >
 			<div class="categorias">
 				<ul>
 					<li><a>Sapatos Novos</a></li>
 					<li><a>Novidades</a></li>
 					<li><a>Quem somos</a></li>
-					<li class="bazar"><a>Bazar</a></li>
+					<li id="bazar"><a>Bazar</a></li>
 				</ul>
 			</div>
-			<div class="logo">
-			<img src="/images/logo.svg" width="130px" alt="owme">	
-			</div>
+			
+				<ul>
+					<li class="logo"><img src="/images/logo.svg"  alt="owme"></li>
+				</ul>
+			
 			<div class="categorias2">
 				<ul>
 					<li><a>Buscar</a></li>
 					<li><a>Minha Conta</a></li>
 					<li><a>Sacola</a></li>
 				</ul>
-			</div>
+			</div>	
+		</div>
 	</header>
+        <nav class="mobile">
+            <ul class="mobile__items">
+                <li><a href="#">Sapatos</a></li><br>
+                <li><a href="#">Novidades</a></li><br>
+                <li><a href="#">Quem somos</a></li><br>
+                <li><a id="bazar" href="#">Bazar</a></li><br>
+                <li class="conta"><a href="#">Minha Conta</a></li><br>
+	            <nav class="hamburger">    
+	                <button class="hamburger__button">
+	                    <span id="close"><p>X</p></span>
+	                </button>
+	            </nav>
+
+            </ul>
+        </nav>
+
+
 		<div class="filter-category">
-			<h3>SAPATOS</h3>
-			<div class="filter">
-				<form>
-					<select>
-						<option>Menor preço</option>
-						<option>Maior preço</option>
-						<option>Nome A-Z</option>
-						<option>Nome Z-A</option>
+			<h3 class="alignleft">SAPATOS</h3>
+			<div class="selectdiv ">
+				<form class="alignright" name="sort" method="get">
+					<select class="selec" id="select" name="ord">
+						<option value="men-pr">Menor preço</option>
+						<option value="mai-pr">Maior preço</option>
+						<option value="atoz">Nome A-Z</option>
+						<option value="ztoa">Nome Z-A</option>
 					</select>
 				</form>
 			</div>
 		</div>
 
-		<div class="products">
-			<!--produtos-->
 
-			<div class="pagination">
-				<!---paginação-->
-			</div>
-		</div>
 		
-	
- <script src="/js/script.min.js"></script>
+		  <div id="products"></div>
+
+		 <div class="pagination">
+		    <span class="pageButton"  id="button_prev"><</span>
+		   <span id="page_number"></span>	   
+		    <span class="pageButton" id="button_next">></span>
+		</div>
+
+
+<script src="/js/script.min.js"></script>
+
 </body>
 </html>

@@ -1,8 +1,69 @@
-$bg: #fff;
+@font-face {
+  font-family: amsipro;
+  src: url('/fonts/amsipro-bold.otf');
+}
+
+@font-face {
+  font-family: amsipro-regular;
+  src: url('/fonts/amsipro-regular.otf');
+}
+
 $corgeral: #333;
 $cor-logo-hover: #84a484;
 $cor-pag: #e2e2e2;
 $cor-borda: #eee;
 $cor-borda-mobile: #eae7e1;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@mixin rwd($screen) {
+   @media (max-width: $screen+'px') {
+       @content;
+   }
+}
+
+@mixin min($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}
+
+
+@mixin sm {
+   @media (max-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (max-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (max-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (max-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
 
 
